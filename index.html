@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Fonts - Noto Sans -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/noto/specimen/Noto+Sans"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="light-theme">
+    <header class="container">
+      <input type="text" class="head-input" />
+
+      <img src="./assets/images/logo.svg" alt="logo" class="head-logo" />
+      <img src="./assets/images/icon-sun.svg" alt="sun" class="head-sun" />
+      <!-- ,<img src="./assets/images/icon-moon.svg" alt="moon" class="head-moon" /> -->
+    </header>
+
+    <main class="container light-theme">
+      <nav class="nav-bar">
+        <h3>Extensions List</h3>
+        <ul class="nav-link">
+          <li>
+            <a href="#" class="filter-link link-1 active" data-filter="all"
+              >All</a
+            >
+          </li>
+          <li>
+            <a href="#" class="filter-link link-2" data-filter="active"
+              >Active</a
+            >
+          </li>
+          <li>
+            <a href="#" class="filter-link link-2" data-filter="inactive"
+              >Inactive</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <div class="grid-section light-theme">
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img src="./assets/images/logo-devlens.svg" alt="devlens" />
+              </div>
+              <div class="sub-heading">
+                <h3>DevLens</h3>
+                <p>
+                  Quickly inspect page layouts and visualize element boundaries.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img src="./assets/images/logo-style-spy.svg" alt="StyleSpy" />
+              </div>
+              <div class="sub-heading">
+                <h3>StyleSpy</h3>
+                <p>Instantly analyze and copy CSS from any webpage element.</p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="inactive">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-speed-boost.svg"
+                  alt="SpeedBoost"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>SpeedBoost</h3>
+                <p>
+                  Optimizes browser resource usage to accelerate page loading.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-off"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-json-wizard.svg"
+                  alt="JSONWizard"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>JSONWizard</h3>
+                <p>
+                  Formats, validates, and prettifies JSON responses in-browser.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-tab-master-pro.svg"
+                  alt="TabMaster"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>TabMaster Pro</h3>
+                <p>Organizes browser tabs into groups and sessions.</p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="inactive">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-viewport-buddy.svg"
+                  alt="ViewportBuddy"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>ViewportBuddy</h3>
+                <p>
+                  Simulates various screen resolutions directly within the
+                  browser.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-off"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-markup-notes.svg"
+                  alt="Markupnotes"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>Markup Notes</h3>
+                <p>
+                  Enables annotation and notes directly onto webpages for
+                  collaborative debugging.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="inactive">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-grid-guides.svg"
+                  alt="GridGuides"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>GridGuides</h3>
+                <p>
+                  Overlay customizable grids and alignment guides on any
+                  webpage.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-off"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-palette-picker.svg"
+                  alt="Palettepicker"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>Palette Picker</h3>
+                <p>Instantly extracts color palettes from any webpage.</p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-link-checker.svg"
+                  alt="LinkChecker"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>LinkChecker</h3>
+                <p>Scans and highlights broken links on any page.</p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="inactive">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-dom-snapshot.svg"
+                  alt="domsnapshot"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>DOM Snapshot</h3>
+                <p>Capture and export DOM structures quickly.</p>
+              </div>
+            </div>
+            <div>
+              <div class="btn-icon">
+                <a class="btn" href="#">Remove</a>
+                <i class="bi bi-toggle-off"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-container" data-status="active">
+            <div class="grid-content">
+              <div class="side-img">
+                <img
+                  src="./assets/images/logo-console-plus.svg"
+                  alt="ConsolePlus"
+                />
+              </div>
+              <div class="sub-heading">
+                <h3>ConsolePlus</h3>
+                <p>
+                  Enhanced developer console with advanced filtering and
+                  logging.
+                </p>
+              </div>
+            </div>
+            <div class="btn-icon">
+              <a class="btn" href="#">Remove</a>
+              <i class="bi bi-toggle-on"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

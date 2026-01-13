@@ -1,0 +1,50 @@
+/* Mobile Styles (Max-width: 768px) */
+@media (max-width: 600px) {
+  .head-input {
+    padding: 0.5rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+    max-width: 90%;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container {
+    padding: 0.8rem;
+  }
+
+  .grid-content {
+    padding-bottom: 2rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-link {
+    justify-content: center;
+    margin-top: 0.7rem;
+  }
+
+  .filter-link {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .head-logo {
+    top: 2.4rem;
+    left: 2rem;
+    width: 20%;
+  }
+
+  .head-sun {
+    top: 2.3rem;
+    right: 2rem;
+    width: 5%;
+  }
+}
